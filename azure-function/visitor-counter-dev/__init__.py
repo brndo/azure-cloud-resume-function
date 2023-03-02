@@ -13,6 +13,7 @@ def main(req: func.HttpRequest, doc:func.DocumentList, outputDocument:func.Out[f
         }    
 
     #add one to counter
+    #Test comment 2:53PM
     temp_counter = str(old_counter_value['count'])
     temp_counter = int(temp_counter)
     new_counter_value = temp_counter + 1
