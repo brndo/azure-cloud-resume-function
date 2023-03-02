@@ -1,0 +1,38 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get",
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "in",
+      "name": "doc",
+      "databaseName": "Cloud-Challenge-Counter-Dev",
+      "collectionName": "Cloud-Challenge-Counter-Dev",
+      "connectionStringSetting": "AzureCosmosDBConnectionString",
+      "sqlQuery": "SELECT * FROM c WHERE c.id = '11fb8b01-3244-473d-9c4e-02b16efa47b6'"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outputDocument",
+      "databaseName": "Cloud-Challenge-Counter-Dev",
+      "collectionName": "Cloud-Challenge-Counter-Dev",
+      "createIfNotExists": false,
+      "connectionStringSetting": "AzureCosmosDBConnectionString"
+    }
+  ]
+}
